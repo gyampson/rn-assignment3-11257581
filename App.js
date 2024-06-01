@@ -14,22 +14,24 @@ export default function App() {
   return (
     <View style={styles.container}>
       <Text style={styles.TSize}>
-        Hello, devs {" " + " " + " " + " " + " " + " " + " " + " "}
+        Hello, Devs {" " + " " + " " + " " + " " + " " + " " + " "}
+        <Image source={require("./profile.png")} />
       </Text>
-
       <Text style={styles.size}>14 tasks today</Text>
-
       <TextInput style={styles.searchBox} placeholder="Search" />
+
       <Text style={styles.Cat}> Categories</Text>
       <ScrollView>
         <ScrollView horizontal={true} style={styles.horizontalScroll}>
           <View style={styles.scrollItem}>
             <Text>Item 1</Text>
             <Text>Item 1</Text>
+            <Image source={require("./woman.png")} />
           </View>
           <View style={styles.scrollItem}>
             <Text>Item 2</Text>
             <Text>Item 2</Text>
+            <Image source={require("./lady.png")} />
           </View>
           <View style={styles.scrollItem}>
             <Text>Item 3</Text>
@@ -60,21 +62,25 @@ export default function App() {
         </ScrollView>
         <Text style={styles.Task}>Ongoing Task</Text>
         <ScrollView style={styles.Text1}>
-          <Text style={styles.Text}> list 1</Text>
-          <Text style={styles.Text}> list 2</Text>
-          <Text style={styles.Text}> list 3</Text>
-          <Text style={styles.Text}> list 4</Text>
-          <Text style={styles.Text}> list 5</Text>
-          <Text style={styles.Text}> list 6</Text>
-          <Text style={styles.Text}> list 7</Text>
-          <Text style={styles.Text}> list 8</Text>
-          <Text style={styles.Text}> list 9</Text>
-          <Text style={styles.Text}> list 10</Text>
-          <Text style={styles.Text}> list 11</Text>
-          <Text style={styles.Text}> list 12</Text>
-          <Text style={styles.Text}> list 13</Text>
-          <Text style={styles.Text}> list 14</Text>
-          <Text style={styles.Text}> list 15</Text>
+          <>
+            <View style={styles.Task1}>
+              <Text style={styles.Text}> list 1</Text>
+              <Text style={styles.Text}> list 2</Text>
+              <Text style={styles.Text}> list 3</Text>
+              <Text style={styles.Text}> list 4</Text>
+              <Text style={styles.Text}> list 5</Text>
+              <Text style={styles.Text}> list 6</Text>
+              <Text style={styles.Text}> list 7</Text>
+              <Text style={styles.Text}> list 8</Text>
+              <Text style={styles.Text}> list 9</Text>
+              <Text style={styles.Text}> list 10</Text>
+              <Text style={styles.Text}> list 11</Text>
+              <Text style={styles.Text}> list 12</Text>
+              <Text style={styles.Text}> list 13</Text>
+              <Text style={styles.Text}> list 14</Text>
+              <Text style={styles.Text}> list 15</Text>
+            </View>
+          </>
         </ScrollView>
       </ScrollView>
     </View>
@@ -99,7 +105,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     paddingLeft: 10,
     marginTop: 20,
-    width: "60%",
+    width: "80%",
     marginBottom: 30,
   },
 
@@ -134,10 +140,17 @@ const styles = StyleSheet.create({
     width: 300,
     height: 100,
     marginTop: 20,
-    marginBottom: 30,
-    alignItems: " ",
-    justifyContent: " center",
-    paddingLeft: 40,
+    marginBottom: 20,
+
+    paddingLeft: 60,
   },
-  Text1: {},
+  Task: {
+    fontSize: 20,
+    fontWeight: "bold",
+    color: "black",
+  },
+  Task1: {
+    justifyContent: " center",
+    alignItems: " center",
+  },
 });
