@@ -1,4 +1,4 @@
-11257581
+                                                                  11257581
 
 The View component is the most fundamental building block for creating UI layouts. It acts as a container that supports layout with flexbox, styling, touch handling, and accessibility controls. You can nest multiple View components inside each other to create complex UI structures. Use View to group UI elements together and apply common styles.
 
