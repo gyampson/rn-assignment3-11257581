@@ -9,6 +9,7 @@ import {
   TextInput,
   ScrollView,
 } from "react-native";
+import Icon from "react-native-vector-icons/FontAwesome";
 
 export default function App() {
   return (
@@ -34,53 +35,54 @@ export default function App() {
             <Image source={require("./lady.png")} />
           </View>
           <View style={styles.scrollItem}>
-            <Text style={styles.Item}>Item 3</Text>
-            <Text style={styles.Item1}>Item 3</Text>
+            <Text style={styles.Item}>Hobbies</Text>
+            <Text style={styles.Item1}>12 Task</Text>
           </View>
           <View style={styles.scrollItem}>
-            <Text style={styles.Item}>Item 4</Text>
-            <Text style={styles.Item1}>Item 4</Text>
+            <Text style={styles.Item}>Health</Text>
+            <Text style={styles.Item1}>12 Task</Text>
           </View>
           <ScrollView horizontal={true} style={styles.horizontalScroll}>
             <View style={styles.scrollItem}>
-              <Text style={styles.Item}>Item 5</Text>
-              <Text style={styles.Item1}> item 5</Text>
+              <Text style={styles.Item}>Home</Text>
+              <Text style={styles.Item1}> 12 Task</Text>
             </View>
             <View style={styles.scrollItem}>
-              <Text style={styles.Item}>Item 6</Text>
-              <Text style={styles.Item1}> item 6</Text>
+              <Text style={styles.Item}>Life style</Text>
+              <Text style={styles.Item1}> 12 Task</Text>
             </View>
             <View style={styles.scrollItem}>
-              <Text style={styles.Item}>Item 7</Text>
-              <Text style={styles.Item1}> item 7</Text>
+              <Text style={styles.Item}>Cooking</Text>
+              <Text style={styles.Item1}> 12 Task</Text>
             </View>
             <View style={styles.scrollItem}>
-              <Text style={styles.Item}>Item 8</Text>
-              <Text style={styles.Item1}> item 8</Text>
+              <Text style={styles.Item}>Entertainment</Text>
+              <Text style={styles.Item1}> 12 Task</Text>
             </View>
           </ScrollView>
         </ScrollView>
-        <View style={styles.Task1}>
-          <Text style={styles.Task}>Ongoing Task</Text>
-        </View>
+
+        <Text style={styles.Task}>Ongoing Task</Text>
         <ScrollView style={styles.Text1}>
-          <View>
-            <Text style={styles.Text}> Mobile App Development</Text>
-            <Text style={styles.Text}>Web Development </Text>
-            <Text style={styles.Text}> Push Ups</Text>
-            <Text style={styles.Text}> list 4</Text>
-            <Text style={styles.Text}> list 5</Text>
-            <Text style={styles.Text}> list 6</Text>
-            <Text style={styles.Text}> list 7</Text>
-            <Text style={styles.Text}> list 8</Text>
-            <Text style={styles.Text}> list 9</Text>
-            <Text style={styles.Text}> list 10</Text>
-            <Text style={styles.Text}> list 11</Text>
-            <Text style={styles.Text}> list 12</Text>
-            <Text style={styles.Text}> list 13</Text>
-            <Text style={styles.Text}> list 14</Text>
-            <Text style={styles.Text}> list 15</Text>
-          </View>
+          <>
+            <View style={styles.Task1}>
+              <Text style={styles.Text}> Mobile App Development</Text>
+              <Text style={styles.Text}>Web Development </Text>
+              <Text style={styles.Text}> Push Ups</Text>
+              <Text style={styles.Text}> Artificial </Text>
+              <Text style={styles.Text}> Cloud computing</Text>
+              <Text style={styles.Text}> Cyber Security</Text>
+              <Text style={styles.Text}> DevOps</Text>
+              <Text style={styles.Text}> Game Development</Text>
+              <Text style={styles.Text}> Health Tech</Text>
+              <Text style={styles.Text}> Quantum Computing</Text>
+              <Text style={styles.Text}> Robotics</Text>
+              <Text style={styles.Text}> Wearable Technology</Text>
+              <Text style={styles.Text}> edge Computing</Text>
+              <Text style={styles.Text}> Biometrics</Text>
+              <Text style={styles.Text}> Fintech</Text>
+            </View>
+          </>
         </ScrollView>
       </ScrollView>
     </View>
@@ -113,7 +115,6 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: "bold",
     color: "black",
-    marginTop: 0,
   },
   scrollItem: {
     fontSize: 20,
@@ -150,9 +151,7 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: "bold",
     color: "black",
-    marginTop: 0,
   },
-  Task1: {},
 
   Item: {
     fontSize: 15,
