@@ -13,14 +13,19 @@ import Icon from "react-native-vector-icons/FontAwesome";
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text style={styles.TSize}>
-        Hello, Devs {" " + " " + " " + " " + " " + " " + " " + " "}
-        <Image source={require("./profile.png")} />
-      </Text>
-      <Text style={styles.size}>14 tasks today</Text>
-      <TextInput style={styles.searchBox} placeholder="Search" />
+    <SafeAreaView style={styles.container}>
+      <View style={styles.img}>
+        <View>
+          <Text style={styles.TSize}>Hello, Devs</Text>
+          <Text style={styles.size}>14 tasks today</Text>
+        </View>
+        <Image source={require("./profile.png")} style={styles.img1} />
+      </View>
 
+      <View style={styles.img10}>
+        <TextInput style={styles.searchBox} placeholder="Search" />
+        <Image source={require("./logo.png")} style={styles.img2} />
+      </View>
       <Text style={styles.Cat}> Categories</Text>
       <ScrollView>
         <ScrollView horizontal={true} style={styles.horizontalScroll}>
@@ -85,14 +90,14 @@ export default function App() {
           </>
         </ScrollView>
       </ScrollView>
-    </View>
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#E8D1BA",
+    backgroundColor: "rgba(232, 209, 186, 0.5)",
     paddingLeft: 20,
   },
   TSize: {
@@ -103,12 +108,13 @@ const styles = StyleSheet.create({
     height: 40,
     borderColor: "gray",
     backgroundColor: "white",
-    borderWidth: 1,
+    borderWidth: 0,
     borderRadius: 10,
     paddingLeft: 10,
     marginTop: 20,
-    width: "80%",
+    width: "75%",
     marginBottom: 20,
+    border: "none",
   },
 
   Cat: {
@@ -144,8 +150,9 @@ const styles = StyleSheet.create({
     marginTop: 10,
     marginBottom: 0,
     paddingTop: 40,
-
     paddingLeft: 20,
+    borderWidth: 1,
+    borderColor: "rgba(232, 209, 186, 0.5)",
   },
   Task: {
     fontSize: 20,
@@ -164,5 +171,19 @@ const styles = StyleSheet.create({
   },
   Text1: {
     paddingTop: 0,
+  },
+  img: {
+    flexDirection: "row",
+  },
+  img1: {
+    marginTop: 45,
+    marginLeft: 85,
+  },
+  img10: {
+    flexDirection: "row",
+  },
+  img2: {
+    marginTop: 15,
+    marginLeft: 25,
   },
 });
